@@ -1,0 +1,14 @@
+# WARNING: template code, may need edits
+
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+black==23.12.1
+flake8==7.0.0
+mypy==1.8.0
+isort==5.13.2
+pre-commit==3.6.0
+ipython==8.19.0
+jupyter==1.0.0
+matplotlib==3.8.2
+seaborn==0.13.1
