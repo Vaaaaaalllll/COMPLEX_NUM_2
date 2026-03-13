@@ -1,0 +1,14 @@
+# WARNING: template code, may need edits
+
+pandas==2.1.4
+pyarrow==14.0.2
+numpy==1.26.3
+pyyaml==6.0.1
+python-dateutil==2.8.2
+scipy==1.11.4
+loguru==0.7.2
+pydantic==2.5.3
+pydantic-settings==2.1.0
+typer==0.9.0
+rich==13.7.0
+tqdm==4.66.1
