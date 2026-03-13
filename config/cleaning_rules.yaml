@@ -1,0 +1,72 @@
+# WARNING: template code, may need edits
+
+# AIS Data Cleaning Configuration
+
+# Coordinate validation
+coordinates:
+  latitude_min: -90.0
+  latitude_max: 90.0
+  longitude_min: -180.0
+  longitude_max: 180.0
+  # Remove points on exact 0,0 (likely errors)
+  remove_null_island: true
+
+# MMSI validation
+mmsi:
+  min_value: 100000000
+  max_value: 999999999
+  # Remove test MMSIs (starting with 0)
+  remove_test_mmsi: true
+
+# Speed validation (knots)
+speed:
+  min_value: 0.0
+  max_value: 50.0  # Reasonable max for most vessels
+  # Remove unrealistic speed jumps
+  max_acceleration: 10.0  # knots per minute
+
+# Course validation (degrees)
+course:
+  min_value: 0.0
+  max_value: 360.0
+
+# Temporal validation
+temporal:
+  # Remove duplicate timestamps for same MMSI
+  remove_duplicate_timestamps: true
+  # Maximum time gap between consecutive points (hours)
+  max_time_gap: 24
+  # Minimum time between updates (seconds)
+  min_time_between_updates: 1
+
+# Spatial validation
+spatial:
+  # Remove points on land (requires land mask)
+  remove_on_land: false
+  # Maximum distance between consecutive points (km)
+  max_distance_jump: 500
+
+# Duplicate removal
+duplicates:
+  # Columns to consider for duplicate detection
+  subset: ["mmsi", "timestamp", "latitude", "longitude"]
+  # Keep first or last occurrence
+  keep: "first"
+
+# Outlier detection
+outliers:
+  # Use statistical methods for outlier detection
+  enabled: true
+  # Z-score threshold
+  z_score_threshold: 3.5
+  # Apply to these columns
+  columns: ["speed", "course"]
+
+# Output settings
+output:
+  # Compression for output Parquet
+  compression: "snappy"
+  # Add cleaning metadata columns
+  add_metadata: true
+  # Generate cleaning report
+  generate_report: true
