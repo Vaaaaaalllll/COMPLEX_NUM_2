@@ -1,0 +1,128 @@
+# WARNING: template code, may need edits
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+PIPFILE.lock
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Data files
+data/raw/*
+data/processed/*
+data/output/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/output/.gitkeep
+!data/sample/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+
+# pipenv
+Pipfile.lock
+
+# pyright
+.pyright
+
+# VSCode
+.vscode/
+
+# Celery
+celerybeat-schedule
+
+# Sphinx
+docs/_build/
+
+# PyCharm
+.idea/
+
+# Coverage
+.coverage
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.pytest_cache/
+
+# PyInstaller
+*.spec
+
+# C extensions
+*.so
+
+# Pyre type checker
+.pyre/
+
+# dotenv
+.env
+
+# virtualenv
+.venv/
+
+# Spyder project settings
+.spyderproject
+
+# Rope project settings
+.ropeproject
